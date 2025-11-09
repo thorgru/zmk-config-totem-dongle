@@ -67,7 +67,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        russian_letter_ {
+        right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <8 9>;
             timeout-ms = <20>;

@@ -189,11 +189,13 @@
     };
 
     macros {
-        ger_ue: ger_ue {
+        umlaut_x: umlaut_x {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LA(U) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "GER_UE";
+            bindings =
+                <&kp LA(U)>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>;
         };
     };
 

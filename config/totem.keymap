@@ -55,7 +55,7 @@
         };
 
         toggle_win_layer {
-            bindings = <&tog 5>;
+            bindings = <&tog 7>;
             key-positions = <0 1 2>;
             layers = <0>;
             timeout-ms = <70>;
@@ -83,7 +83,7 @@
             key-positions = <22 23>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <5>;
+            layers = <7>;
         };
 
         paste_win {
@@ -91,7 +91,7 @@
             key-positions = <23 24>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <5>;
+            layers = <7>;
         };
 
         toggle_base_layer {
@@ -99,7 +99,7 @@
             key-positions = <10 11 12>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <5>;
+            layers = <7>;
         };
     };
 
@@ -201,10 +201,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        base_layer_mac {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "BASE";
+            label = "BASE_MAC";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -221,7 +221,62 @@
                              &kp Q  &kp W                  &kp E            &kp R                    &kp T        &kp Y          &kp U                     &kp I             &kp O                   &kp P
                              &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G        &kp H          &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
 &mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp V                    &kp B        &kp N          &kp M                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL SQT
-                                                           &kp TAB          &mo 1                    &kp SPACE    &kp BACKSPACE  &mo 2                     &kp DELETE
+                                                           &kp TAB          &mo 5                    &kp SPACE    &kp BACKSPACE  &mo 1                     &kp DELETE
+            >;
+        };
+
+        sym_layer_mac {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "SYM_MAC";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
+            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
+            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
+            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
+            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+
+            bindings = <
+        &kp EXCL     &kp AT     &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &kp DQT
+        &umlaut_x A  &kp RA(S)  &trans    &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
+                                &trans    &trans         &mo 6                   &trans        &kp C_PP      &trans
+            >;
+        };
+
+        sc_layer_mac {
+            bindings = <
+        &trans           &trans  &trans  &trans  &trans    &trans  &umlaut_x LS(U)  &trans  &umlaut_x LS(O)  &trans
+        &umlaut_x LS(A)  &trans  &trans  &trans  &trans    &trans  &trans           &trans  &trans           &trans
+&trans  &trans           &trans  &trans  &trans  &trans    &trans  &trans           &trans  &trans           &trans  &trans
+                                 &trans  &trans  &trans    &trans  &trans           &trans
+            >;
+
+            label = "SC_MAC";
+        };
+
+        base_layer_win {
+            label = "BASE_WIN";
+            bindings = <
+                         &kp Q  &kp W                  &kp E                    &kp R                    &kp T        &kp Z          &kp U                     &kp I                      &kp O                   &kp P
+                         &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G        &kp H          &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
+&mt_all LEFT_WIN ESCAPE  &kp Y  &kp X                  &kp C                    &kp V                    &kp B        &kp N          &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
+                                                       &kp TAB                  &mo 6                    &kp SPACE    &kp BACKSPACE  &mo 4                     &kp DELETE
+            >;
+        };
+
+        sym_win {
+            label = "SYM_WIN";
+            bindings = <
+        &kp EXCL     &kp AT     &kp HASH  &kp DLLR        &kp PRCNT               &kp CARET     &kp RA(Y)     &kp ASTERISK   &kp RA(P)         &kp DQT
+        &kp RA(Q)    &kp RA(S)  &trans    &kp LEFT_SHIFT  &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
+                                &trans    &trans          &mo 6                   &trans        &kp C_PP      &trans
             >;
         };
 
@@ -246,49 +301,6 @@
            &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBKT    &kp RBKT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
 &kp TILDE  &trans     &kp PG_UP       &kp LG(DOWN)    &kp PG_DN        &kp LPAR    &kp RPAR    &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &kp KP_DIVIDE
                                       &trans          &trans           &trans      &kp PERIOD  &kp N0        &kp KP_COMMA
-            >;
-        };
-
-        sim_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp EXCL     &kp AT     &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &kp DQT
-        &umlaut_x A  &kp RA(S)  &trans    &mo 3          &trans                  &kp C_MUTE    &mo 3         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
-                                &trans    &trans         &mo 5                   &trans        &kp C_PP      &trans
-            >;
-        };
-
-        test_layer {
-            bindings = <
-        &trans           &trans  &trans  &trans  &trans    &trans  &umlaut_x LS(U)  &trans  &umlaut_x LS(O)  &trans
-        &umlaut_x LS(A)  &trans  &trans  &trans  &trans    &trans  &trans           &trans  &trans           &trans
-&trans  &trans           &trans  &trans  &trans  &trans    &trans  &trans           &trans  &trans           &trans  &trans
-                                 &trans  &trans  &trans    &trans  &trans           &trans
-            >;
-        };
-
-        base_layer_win {
-            label = "WIN";
-            bindings = <
-                         &kp Q  &kp W                  &kp E                    &kp R                    &kp T        &kp Z          &kp U                     &kp I                      &kp O                   &kp P
-                         &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G        &kp H          &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_WIN ESCAPE  &kp Y  &kp X                  &kp C                    &kp V                    &kp B        &kp N          &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
-                                                       &kp TAB                  &mo 1                    &kp SPACE    &kp BACKSPACE  &mo 2                     &kp DELETE
             >;
         };
 

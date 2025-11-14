@@ -55,7 +55,7 @@
         };
 
         toggle_win_layer {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <0 1 2>;
             layers = <0>;
             timeout-ms = <70>;
@@ -83,7 +83,7 @@
             key-positions = <22 23>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <4>;
+            layers = <5>;
         };
 
         paste_win {
@@ -91,7 +91,7 @@
             key-positions = <23 24>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <4>;
+            layers = <5>;
         };
 
         toggle_base_layer {
@@ -99,7 +99,7 @@
             key-positions = <10 11 12>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -225,8 +225,6 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -251,8 +249,6 @@
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
         sim_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -270,14 +266,31 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT  &kp HASH  &kp DLLR        &kp PRCNT               &kp CARET     &kp AMPERSAND    &kp ASTERISK  &kp SQT     &kp DQT
-        &umlaut_x A  &trans  &trans    &kp LEFT_SHIFT  &trans                  &kp C_MUTE    &kp RIGHT_SHIFT  &trans        &trans      &kp RA(O)
-&trans  &kp RA(F18)  &trans  &trans    &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP     &kp C_PREV    &kp C_NEXT  &kp BSLH   &trans
-                             &trans    &trans          &mo 3                   &trans        &kp C_PP         &trans
+        &kp EXCL     &kp AT  &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp SQT     &kp DQT
+        &umlaut_x A  &trans  &trans    &mo 3          &trans                  &kp C_MUTE    &mo 3          &trans        &trans      &kp RA(O)
+&trans  &kp RA(F18)  &trans  &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP   &kp C_PREV    &kp C_NEXT  &kp BSLH   &trans
+                             &trans    &trans         &mo 5                   &trans        &kp C_PP       &trans
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        test_layer {
+            bindings = <
+        &trans           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &umlaut_x LS(A)  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        base_layer_win {
+            label = "WIN";
+            bindings = <
+                         &kp Q  &kp W                  &kp E                    &kp R                    &kp T        &kp Z          &kp U                     &kp I                      &kp O                   &kp P
+                         &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G        &kp H          &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
+&mt_all LEFT_WIN ESCAPE  &kp Y  &kp X                  &kp C                    &kp V                    &kp B        &kp N          &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
+                                                       &kp TAB                  &mo 1                    &kp SPACE    &kp BACKSPACE  &mo 2                     &kp DELETE
+            >;
+        };
 
         adjust_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -300,25 +313,6 @@
         &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                  &trans        &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        base_layer_win {
-            label = "WIN";
-            bindings = <
-                         &kp Q  &kp W                  &kp E                    &kp R                    &kp T        &kp Z          &kp U                     &kp I                      &kp O                   &kp P
-                         &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G        &kp H          &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_WIN ESCAPE  &kp Y  &kp X                  &kp C                    &kp V                    &kp B        &kp N          &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
-                                                       &kp TAB                  &mo 1                    &kp SPACE    &kp BACKSPACE  &mo 2                     &kp DELETE
-            >;
-        };
-
-        test_layer {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 

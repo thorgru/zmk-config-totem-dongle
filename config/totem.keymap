@@ -194,6 +194,13 @@
             #binding-cells = <1>;
             bindings = <&kp LA(U) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
+
+        no_dead_key: no_dead_key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
+            label = "NO_DEAD_KEY";
+        };
     };
 
     keymap {
@@ -242,10 +249,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT     &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &kp DQT
-        &umlaut_x A  &kp RA(S)  &trans    &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
-                                &trans    &trans         &mo 6                   &trans        &kp C_PP      &trans
+        &kp EXCL     &kp AT                &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &trans
+        &umlaut_x A  &kp LA(LS(NUMBER_2))  &trans    &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans                &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
+                                           &trans    &trans         &mo 6                   &trans        &kp C_PP      &trans
             >;
         };
 
@@ -273,10 +280,10 @@
         sym_win {
             label = "SYM_WIN";
             bindings = <
-        &kp EXCL     &kp AT     &kp HASH  &kp DLLR        &kp PRCNT               &kp CARET     &kp RA(Y)     &kp ASTERISK   &kp RA(P)         &kp DQT
-        &kp RA(Q)    &kp RA(S)  &trans    &kp LEFT_SHIFT  &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
-                                &trans    &trans          &mo 6                   &trans        &kp C_PP      &trans
+        &kp EXCL     &kp AT     &kp HASH  &kp DLLR        &kp PRCNT               &no_dead_key CARET  &kp RA(Y)     &kp ASTERISK   &kp RA(P)                  &trans
+        &kp RA(Q)    &kp RA(S)  &trans    &kp LEFT_SHIFT  &trans                  &kp C_MUTE          &kp RSHFT     &kp AMPERSAND  &no_dead_key SINGLE_QUOTE  &no_dead_key DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN        &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT                 &kp BSLH                    &trans
+                                &trans    &trans          &mo 6                   &trans              &kp C_PP      &trans
             >;
         };
 

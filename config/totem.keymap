@@ -95,7 +95,7 @@
         };
 
         toggle_base_layer {
-            bindings = <&tog 0>;
+            bindings = <&tog 3>;
             key-positions = <10 11 12>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;

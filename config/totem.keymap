@@ -55,7 +55,7 @@
         };
 
         toggle_win_layer {
-            bindings = <&tog 7>;
+            bindings = <&tog 3>;
             key-positions = <0 1 2>;
             layers = <0>;
             timeout-ms = <70>;
@@ -249,10 +249,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT                &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &trans
-        &umlaut_x A  &kp LA(LS(NUMBER_2))  &trans    &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
-&trans  &kp RA(F18)  &trans                &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
-                                           &trans    &trans         &mo 6                   &trans        &kp C_PP      &trans
+        &kp EXCL     &kp AT     &kp HASH              &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &trans
+        &umlaut_x A  &kp LA(S)  &kp LS(LA(NUMBER_2))  &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans     &trans                &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
+                                &trans                &trans         &mo 6                   &trans        &kp C_PP      &trans
             >;
         };
 

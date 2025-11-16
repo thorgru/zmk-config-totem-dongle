@@ -99,7 +99,7 @@
             key-positions = <10 11 12>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <7>;
+            layers = <3>;
         };
     };
 

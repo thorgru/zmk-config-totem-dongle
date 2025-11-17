@@ -280,10 +280,10 @@
         sym_win {
             label = "SYM_WIN";
             bindings = <
-        &kp EXCL     &kp AT     &kp HASH  &kp DLLR        &kp PRCNT               &no_dead_key CARET  &kp RA(Y)     &kp ASTERISK   &kp RA(P)                  &trans
-        &kp RA(Q)    &kp RA(S)  &trans    &kp LEFT_SHIFT  &trans                  &kp C_MUTE          &kp RSHFT     &kp AMPERSAND  &no_dead_key SINGLE_QUOTE  &no_dead_key DOUBLE_QUOTES
-&trans  &kp RA(F18)  &trans     &trans    &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN        &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT                 &kp BSLH                    &trans
-                                &trans    &trans          &mo 6                   &trans              &kp C_PP      &trans
+        &kp EXCL     &kp AT     &kp HASH    &kp DLLR        &kp PRCNT               &no_dead_key CARET  &kp RA(Y)     &kp ASTERISK   &kp RA(P)                  &trans
+        &kp RA(Q)    &kp RA(S)  &kp RA(N5)  &kp LEFT_SHIFT  &trans                  &kp C_MUTE          &kp RSHFT     &kp AMPERSAND  &no_dead_key SINGLE_QUOTE  &no_dead_key DOUBLE_QUOTES
+&trans  &kp RA(F18)  &trans     &trans      &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN        &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT                 &kp BSLH                    &trans
+                                &trans      &trans          &mo 6                   &trans              &kp C_PP      &trans
             >;
         };
 

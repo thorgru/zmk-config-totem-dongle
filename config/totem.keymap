@@ -55,7 +55,7 @@
         };
 
         toggle_win_layer {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <0 1 2>;
             layers = <0>;
             timeout-ms = <70>;
@@ -83,7 +83,7 @@
             key-positions = <22 23>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4>;
         };
 
         paste_win {
@@ -91,21 +91,21 @@
             key-positions = <23 24>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4>;
         };
 
         toggle_base_layer {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <10 11 12>;
             timeout-ms = <70>;
             require-prior-idle-ms = <100>;
-            layers = <3>;
+            layers = <4>;
         };
 
         cb_hist_win {
             bindings = <&kp LG(V)>;
             key-positions = <22 23 24>;
-            layers = <3>;
+            layers = <4>;
         };
     };
 
@@ -257,7 +257,7 @@
                              &kp Q  &kp W                  &kp E            &kp R                    &kp T            &kp Y                                 &kp U                     &kp I             &kp O                   &kp P
                              &kp A  &mt_shift_left LALT S  &mt_left LGUI D  &mt_shift_left LSHIFT F  &kp G            &kp H                                 &mt_shift_right LSHIFT J  &mt_right LGUI K  &mt_shift_right LALT L  &kp SEMICOLON
 &mt_all LEFT_CONTROL ESCAPE  &kp Z  &kp X                  &kp C            &kp V                    &kp B            &kp N                                 &kp M                     &kp COMMA         &kp DOT                 &kp FSLH       &mt_all RCTRL BACKSLASH
-                                                           &kp TAB          &mo 5                    &kp BACKSPACE    &mt_thumb LS(LA(LC(LEFT_GUI))) SPACE  &mo 1                     &kp DELETE
+                                                           &kp TAB          &mo 6                    &kp BACKSPACE    &mt_thumb LS(LA(LC(LEFT_GUI))) SPACE  &mo 1                     &kp DELETE
             >;
         };
 
@@ -281,7 +281,7 @@
         &kp EXCL     &kp AT     &kp HASH              &kp DLLR       &kp PRCNT               &kp CARET     &umlaut_x U   &kp ASTERISK   &umlaut_x O       &trans
         &umlaut_x A  &kp LA(S)  &kp LS(LA(NUMBER_2))  &mo 2          &trans                  &kp C_MUTE    &mo 2         &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES
 &trans  &kp RA(F18)  &trans     &trans                &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT        &kp BSLH           &trans
-                                &trans                &trans         &mo 6                   &trans        &kp C_PP      &trans
+                                &trans                &mo 3          &mo 7                   &trans        &kp C_PP      &trans
             >;
         };
 
@@ -296,13 +296,22 @@
             label = "SC_MAC";
         };
 
+        aerospace_nav_mac {
+            bindings = <
+                  &none  &none          &none         &none           &none    &none          &none                                  &none                          &kp LA(MINUS)                  &kp LA(EQUAL)
+                  &none  &kp RIGHT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none    &kp LA(LS(H))  &mt_shift_right RIGHT_SHIFT LA(LS(J))  &mt_right RIGHT_GUI LA(LS(K))  &mt_right RIGHT_ALT LA(LS(L))  &kp LS(LA(SEMICOLON))
+&kp LEFT_CONTROL  &none  &none          &none         &none           &none    &none          &none                                  &none                          &none                          &none                  &kp RIGHT_CONTROL
+                                        &none         &none           &none    &none          &none                                  &none
+            >;
+        };
+
         base_layer_win {
             label = "BASE_WIN";
             bindings = <
                          &kp Q  &kp W                  &kp E                    &kp R                    &kp T            &kp Z      &kp U                     &kp I                      &kp O                   &kp P
                          &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G            &kp H      &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
 &mt_all LEFT_WIN ESCAPE  &kp Y  &kp X                  &kp C                    &kp V                    &kp B            &kp N      &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
-                                                       &kp TAB                  &mo 5                    &kp BACKSPACE    &kp SPACE  &mo 4                     &kp DELETE
+                                                       &kp TAB                  &mo 6                    &kp BACKSPACE    &kp SPACE  &mo 5                     &kp DELETE
             >;
         };
 
@@ -312,7 +321,7 @@
         &kp EXCL     &kp AT     &kp HASH    &kp DLLR        &kp PRCNT               &no_dead_key CARET  &kp RA(Y)     &kp ASTERISK   &kp RA(P)                  &trans
         &kp RA(Q)    &kp RA(S)  &kp RA(N5)  &kp LEFT_SHIFT  &trans                  &kp C_MUTE          &kp RSHFT     &kp AMPERSAND  &no_dead_key SINGLE_QUOTE  &no_dead_key DOUBLE_QUOTES
 &trans  &kp RA(F18)  &trans     &trans      &kp C_BRI_DEC   &kp C_BRIGHTNESS_INC    &kp C_VOL_DN        &kp C_VOL_UP  &kp C_PREV     &kp C_NEXT                 &kp BSLH                    &trans
-                                &trans      &trans          &mo 6                   &trans              &kp C_PP      &trans
+                                &trans      &trans          &mo 7                   &trans              &kp C_PP      &trans
             >;
         };
 

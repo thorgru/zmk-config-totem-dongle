@@ -107,6 +107,18 @@
             key-positions = <22 23 24>;
             layers = <4>;
         };
+
+        select_all_win {
+            bindings = <&kp LC(A)>;
+            key-positions = <10 22>;
+            layers = <4>;
+        };
+
+        select_all_mac {
+            bindings = <&kp LG(A)>;
+            key-positions = <10 22>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -310,7 +322,7 @@
             bindings = <
                          &kp Q  &kp W                  &kp E                    &kp R                    &kp T            &kp Y      &kp U                     &kp I                      &kp O                   &kp P
                          &kp A  &mt_shift_left LALT S  &mt_left LEFT_CONTROL D  &mt_shift_left LSHIFT F  &kp G            &kp H      &mt_shift_right LSHIFT J  &mt_right RIGHT_CONTROL K  &mt_shift_right LALT L  &kp SEMICOLON
-&mt_all LEFT_WIN ESCAPE  &kp Z  &kp X                  &kp C                    &kp V                    &kp B            &kp N      &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN SQT
+&mt_all LEFT_WIN ESCAPE  &kp Z  &kp X                  &kp C                    &kp V                    &kp B            &kp N      &kp M                     &kp COMMA                  &kp DOT                 &kp FSLH       &mt_all RIGHT_WIN BACKSLASH
                                                        &kp TAB                  &mo 6                    &kp BACKSPACE    &kp SPACE  &mo 5                     &kp DELETE
             >;
         };
